@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+@media all and (max-width:1260px){
+	.skilllist .skillDiv{
+		width: 33.33%;
+		margin-right: 0;
+	}
+	.WrapCenter{
+		width: 100%;
+	}
+	
+	.PFlist .PFDiv{
+		width: 33.33%;
+		padding-top: 33.33%;
+		margin-right: 0%;
+		margin-bottom: 0px;
+	}
+	.gallery .gallery-link{
+		width: 33.33%;
+		padding-bottom: 33.33%;
+	}
+}
+
+@media all and (max-width:480px){
+	.skilllist .skillDiv{
+		width: 50%;
+	}
+	
+	/*포폴*/
+	.PFlist .PFDiv{
+		width: 50%;
+		padding-top: 50%;
+	}
+	.gallery .gallery-link{
+		width: 50%;
+		padding-bottom: 50%;
+	}
+	
+	#footerDiv .FooterWrap .footer_top{
+		padding: 50px 20px;
+	}
+}

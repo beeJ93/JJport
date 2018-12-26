@@ -1,0 +1,383 @@
+@charset "UTF-8";
+
+/*skipNav*/
+#skipNav{
+    position: relative;
+}
+#skipNav a{
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: -99px;
+    opacity: 0.8;
+    transition: 0.8s;
+}
+#skipNav a:focus, #skipNav a:active{
+    top: 0;
+}
+#skipNav a:hover{
+    top: 0;
+    opacity: 1;
+}
+
+/*mainVisual*/
+.mainBG{
+    background: url(../img/main/florian-wehde-1198372-unsplash.jpg) no-repeat center 0 / cover;
+	height: 90vh;
+	position: relative;
+}
+.visDiv{
+	width: 100%;
+	height: 90vh;
+	display: table;
+}
+.visDiv .txtDiv{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.visDiv .txtDiv .txt{
+	animation-duration: 1.5s;
+	animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 80%;
+	opacity: 0;
+  }
+
+  to {
+    margin-left: 0%;
+	opacity: 1;
+  }
+}
+.visDiv .subtext{
+	font-size: 15px;
+}
+.visDiv .nametext{
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 0.8;
+}
+
+/*메인컨텐츠 공통*/
+.h2Div{
+	padding-top: 100px;
+	text-transform: uppercase;
+	text-align: center;
+	background: url(../img/common/line.gif) no-repeat center 0;
+}
+.h2Div h2{
+	font-size: 48px;
+	font: @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+	font-style: italic;
+}
+.h2Div p{
+	font-size: 16px;
+	opacity: 0.9;
+}
+
+/*스킬*/
+.skilllist{
+	margin-top: 80px;
+	margin-bottom: 100px;
+}
+.skilllist .skillDiv{
+    width: 24.25%;
+    float: left;
+	margin-right: 1%;
+	margin-bottom: 100px;
+    transition:  all 0.8s ease;
+}
+.skilllist .skillDiv:nth-child(4n){
+	margin-right: 0;
+}
+.skillDiv figcaption{
+}
+.skillDiv figcaption h3{
+	text-align: center;
+	font-size: 20px;
+	margin: 40px 0 20px 0;
+}
+.skillWrap .chart{
+    position:relative;
+    width:165px;
+    height:165px;
+    margin: 0 auto;
+}
+.skillWrap canvas{
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.skillWrap span{
+    color:#555;
+    display:block;
+    line-height:165px;
+    text-align:center;
+    width:165px;
+    font-size:40px;
+    font-weight:300;
+}
+.skillDiv .skilltxt{
+	padding: 0 20px;
+}
+.skillDiv .skilltxt p{
+	margin-bottom: 5px;
+}
+
+/*좌우명*/
+.quipperyWrap{
+	position: relative;
+	height: 200px;
+}
+.quipperyBG1{
+	background: url(../img/main/janko-ferlic-174927-unsplash.jpg) no-repeat center center / cover;
+}
+.quipperyBG2{
+	background: url(../img/main/mervyn-chan-262968-unsplash.jpg) no-repeat 50% 50% / cover;
+}
+.quipperyWrap:before{
+	display: block;
+	content: "";
+	background: rgba(0,0,0,0.6);
+	height: 200px;
+}
+.quipperyWrap .quipperDiv{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 200px;
+	font-size: 20px;
+	display: table;
+}
+.quipperyWrap .quipperDiv .tablecell{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.quipperyWrap .quipperDiv .tablecell .f_Yeon{
+	margin-bottom: 10px;
+}
+
+/*포트폴리오*/
+.PFlist{
+	margin-top: 60px;
+	margin-bottom: 150px;
+}
+.PFlist .PFDiv{
+    width: 24.25%;
+    float: left;
+    position: relative;
+    padding-top: 25%;
+    overflow: hidden;
+	margin-right: 1%;
+	margin-bottom: 15px;
+    transition:  all 0.8s ease;
+}
+
+@keyframes portfolio {
+  from {
+	top: 300px;
+	opacity: 0;
+  }
+
+  to {
+	top: 0px;
+	opacity: 2;
+  }
+}
+.PFlist .PFDiv:nth-child(4n){
+	margin-right: 0;
+}
+.PFlist .PFDiv a{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+}
+.PFlist .PFDiv a .imgtxt{
+	width: 100%;
+ 	height: 100%;
+ 	background-color: black; /* fallback color */
+  	background-position: top center;
+  	background-size: cover;
+}
+.PFlist .PFDiv:nth-child(1) .imgtxt{
+	background-image: url(../img/main/bg_mainvis_01.jpg);
+}
+.PFlist .PFDiv:nth-child(2) .imgtxt{
+	background-image: url(../img/main/bg_mainvis_02.jpg);
+}
+.PFlist .PFDiv:nth-child(3) .imgtxt{
+	background-image: url(../img/main/bg_mainvis_01.jpg);
+}
+.PFlist .PFDiv:nth-child(4) .imgtxt{
+	background-image: url(../img/main/bg_mainvis_01.jpg);
+}
+.PFlist .PFDiv:nth-child(5) .imgtxt{
+	background-image: url(../img/main/bg_mainvis_01.jpg);
+}
+.PFlist .PFDiv:nth-child(6) .imgtxt{
+	background-image: url(../img/main/bg_mainvis_01.jpg);
+}
+.PFlist .PFDiv a:hover .imgtxt, .PFlist .PFDiv a:focus .imgtxt{
+	transform: scale(1.1);
+	transition: all .5s;
+}
+.PFlist .PFDiv a .imgtxt:before{
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+}
+.PFlist .PFDiv a:hover .imgtxt:before, .PFlist .PFDiv a:focus .imgtxt:before{
+	display: block;
+}
+.PFlist .PFDiv a .imgtxt .pagename{
+  	margin: 0;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	display: none;
+}
+.PFlist .PFDiv a:hover .imgtxt .pagename{
+	display: block;
+}
+.PFlist .PFDiv a .imgtxt .pagename span{
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+/*포토갤러리*/
+.gallery{
+	margin-top: 80px;
+	margin-bottom: 150px;
+}
+.gallery .gallery-link{
+	position: relative;
+	width: 25%;
+	padding-bottom: 25%;
+	float: left;
+	overflow: hidden;
+	transition: all 0.2s;
+}
+
+.gallery .gallery-link .gallery-image{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+    max-width: 100%;
+    height: auto;
+    vertical-align: top
+}
+.gallery .gallery-link .gallery-image:before, .gallery-image:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 16px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+  will-change: border;
+}
+.gallery-image:after {
+  border-width: 0;
+}
+html:not(.touch) .gallery-image{
+  overflow: hidden;
+}
+html:not(.touch) .gallery-image:hover:before{
+  border-width: 16px;
+}
+html:not(.touch) .gallery-image:hover:after{
+  border-width: 32px;
+}
+.gallery .gallery-link .gallery-image img{
+	max-height: 100%;
+    min-width: 100%;
+    object-fit: cover; /* Fit logo in the image size */
+        -o-object-fit: cover; /* Fit logo fro opera browser */
+    object-position: top; /* Set logo position */
+        -o-object-position: top; /* Logo position for opera browser */
+}
+.gallery .gallery-link .gallery-image figcaption{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0);
+  padding: 1em;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  max-width: calc(100% - 9em);
+  line-height: 1.25;
+  text-align: center;
+  box-sizing: border-box;
+}
+.gallery .gallery-link .gallery-image:hover figcaption {
+  color: white;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease 0.3s;
+}
+.gallery-image figcaption:before, .gallery-image figcaption:after{
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  z-index: -1;
+}
+.gallery-image figcaption:before{
+  right: 100%;
+  bottom: 100%;
+}
+.gallery-image figcaption:after {
+  left: 100%;
+  top: 100%;
+}
+.gallery-image:hover figcaption:before, .gallery-image:hover figcaption:after{
+  opacity: 1;
+}
+.gallery-image:hover figcaption:before{
+  right: -1.5em;
+  bottom: -1.5em;
+}
+.gallery-image:hover figcaption:after {
+  left: -1.5em;
+  top: -1.5em;
+}
+.mapDiv iframe{
+	display: block;
+	width: 100%;
+	height: 300px;
+	border: 0;
+}
+
+
+
