@@ -219,16 +219,16 @@
 	background-image: url(../img/main/bg_mainvis_02.jpg);
 }
 .PFlist .PFDiv:nth-child(3) .imgtxt{
-	background-image: url(../img/main/bg_mainvis_01.jpg);
+	background-image: url(../img/main/bg_mainvis_03.jpg);
 }
 .PFlist .PFDiv:nth-child(4) .imgtxt{
-	background-image: url(../img/main/bg_mainvis_01.jpg);
+	background-image: url(../img/main/bg_mainvis_04.jpg);
 }
 .PFlist .PFDiv:nth-child(5) .imgtxt{
-	background-image: url(../img/main/bg_mainvis_01.jpg);
+	background-image: url(../img/main/bg_mainvis_05.jpg);
 }
 .PFlist .PFDiv:nth-child(6) .imgtxt{
-	background-image: url(../img/main/bg_mainvis_01.jpg);
+	background-image: url(../img/main/bg_mainvis_06.jpg);
 }
 .PFlist .PFDiv a:hover .imgtxt, .PFlist .PFDiv a:focus .imgtxt{
 	transform: scale(1.1);
