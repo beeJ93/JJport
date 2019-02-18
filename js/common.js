@@ -17,7 +17,6 @@ $(document).ready(function(){
 		$('#element').off('scroll touchmove mousewheel');
 		$('.gnbclose').hide();
 		$('.gnbopen').show();
-		return false;
 	});
 	$('.gnb ul li a').click(function(){
 		$('.gnb').hide();
