@@ -137,4 +137,16 @@ $(document).ready(function(){
 		drawNewGraph('graph7');
 		drawNewGraph('graph8');
 	});
+	
+	//포폴상세
+	$("#portfolio .PFDiv").click(function(){
+		$($(this).attr("rel")).css('bottom', '0');
+		$('body').css('overflow', 'hidden');
+		$('#galleryview_css .boxwrap').css('overflow-y', 'scroll');
+	});
+	$("#galleryview_css .gallery_close").click(function(){
+		$("#galleryview_css .boxwrap").css('bottom', "-100%");
+		$('body').css('overflow', 'auto');
+		$('#galleryview_css .boxwrap').css('overflow', 'hidden');
+	});
 });

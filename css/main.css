@@ -26,11 +26,7 @@
 }
 
 /*mainVisual*/
-.mainBG{
-    background: url(../img/main/florian-wehde-1198372-unsplash.jpg) no-repeat center 0 / cover;
-	height: 90vh;
-	position: relative;
-}
+.mainBG{ background: url(../img/main/florian-wehde-1198372-unsplash.jpg) no-repeat center 0 / cover; height: 90vh; position: relative; background-attachment: fixed; }
 .visDiv{
 	width: 100%;
 	height: 90vh;
@@ -126,7 +122,7 @@
     font-weight:300;
 }
 .skillDiv .skilltxt{
-	padding: 0 20px;
+	padding: 0 20px; text-align: center; 
 }
 .skillDiv .skilltxt p{
 	margin-bottom: 5px;
@@ -194,10 +190,12 @@
 	opacity: 2;
   }
 }
+.PFlist .PFDiv{ cursor: pointer; }
 .PFlist .PFDiv:nth-child(4n){
 	margin-right: 0;
 }
-.PFlist .PFDiv a{
+.PFlist .PFDiv a,
+.PFlist .PFDiv .imgpo{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -205,35 +203,21 @@
 	bottom: 0;
 	display: block;
 }
-.PFlist .PFDiv a .imgtxt{
+.PFlist .PFDiv a .imgtxt,
+.PFlist .PFDiv .imgpo .imgtxt{
 	width: 100%;
  	height: 100%;
  	background-color: black; /* fallback color */
   	background-position: top center;
   	background-size: cover;
 }
-.PFlist .PFDiv:nth-child(1) .imgtxt{
-	background-image: url(../img/main/bg_mainvis_01.jpg);
-}
-.PFlist .PFDiv:nth-child(2) .imgtxt{
-	background-image: url(../img/main/bg_mainvis_02.jpg);
-}
-.PFlist .PFDiv:nth-child(3) .imgtxt{
-	background-image: url(../img/main/bg_mainvis_03.jpg);
-}
-.PFlist .PFDiv:nth-child(4) .imgtxt{
-	background-image: url(../img/main/bg_mainvis_04.jpg);
-}
-.PFlist .PFDiv:nth-child(5) .imgtxt{
-	background-image: url(../img/main/bg_mainvis_05.jpg);
-}
-.PFlist .PFDiv:nth-child(6) .imgtxt{
-	background-image: url(../img/main/bg_mainvis_06.jpg);
-}
+
+.PFlist .PFDiv .imgpo:hover .imgtxt, .PFlist .PFDiv .imgpo:focus .imgtxt,
 .PFlist .PFDiv a:hover .imgtxt, .PFlist .PFDiv a:focus .imgtxt{
 	transform: scale(1.1);
 	transition: all .5s;
 }
+.PFlist .PFDiv .imgpo .imgtxt:before,
 .PFlist .PFDiv a .imgtxt:before{
 	content: "";
 	display: block;
@@ -245,9 +229,11 @@
 	background-color: rgba(0,0,0,0.7);
 	display: none;
 }
+.PFlist .PFDiv .imgpo:hover .imgtxt:before, .PFlist .PFDiv .imgpo:focus .imgtxt:before,
 .PFlist .PFDiv a:hover .imgtxt:before, .PFlist .PFDiv a:focus .imgtxt:before{
 	display: block;
 }
+.PFlist .PFDiv .imgpo .imgtxt .pagename,
 .PFlist .PFDiv a .imgtxt .pagename{
   	margin: 0;
   	position: absolute;
@@ -256,9 +242,11 @@
   	transform: translate(-50%, -50%);
 	display: none;
 }
+.PFlist .PFDiv .imgpo:hover .imgtxt .pagename,
 .PFlist .PFDiv a:hover .imgtxt .pagename{
 	display: block;
 }
+.PFlist .PFDiv .imgpo .imgtxt .pagename span,
 .PFlist .PFDiv a .imgtxt .pagename span{
 	font-weight: bold;
 	display: block;
@@ -380,4 +368,71 @@ html:not(.touch) .gallery-image:hover:after{
 }
 
 
+/* =========================
+	공통 클래스
+========================= */
+.w1200{ max-width: 1220px; margin: 0 auto; padding: 0 10px; }
+
+.str{ position: relative; }
+.str .center{ position: absolute; top: 50%; left: 50%; transform:translateX(-50%) translateY(-50%); -webkit-transform:translateX(-50%) translateY(-50%); }
+
+.trans04{
+-webkit-transition: 0.4s ease-in-out;
+-moz-transition: 0.4s ease-in-out;
+-ms-transition: 0.4s ease-in-out;
+-o-transition: 0.4s ease-in-out;
+transition: 0.4s ease-in-out;
+}
+/* =========================
+	서브헤더
+========================= */
+/*배경*/
+.subhd{ background: url(../img/main/mervyn-chan-262968-unsplash.jpg) no-repeat 50% 50%; background-size: cover; }
+
+/* 배경 텍스트 */
+.caption.center{ position: absolute; left: 0; top: 50%; width: 100%; text-align: center; transform:translateY(-50%); -webkit-transform:translateY(-50%); padding: 0 10px; box-sizing: border-box; -webkit-box-sizing: border-box; color: #fff; }
+.caption .tit{ font-family: 'Noto Sans KR', sans-serif; font-weight: 900; line-height: 0.8; margin-bottom: 30px; text-shadow: 5px 5px 10px rgba(0,0,0,0.4); display: inline-block; }
+.caption .tit.tit-boder{ border-bottom: 17px solid #284baa; box-sizing: border-box; -webkit-box-sizing: border-box; }
+.caption .txt01{ display: inline-block; background: #284baa; padding: 2px 5px; font-size: 1rem; font-weight: 700; color: #fff; }
+.caption .sns-link{ margin-top: 30px; }
+.caption .sns-link img{ vertical-align: middle; }
+.caption .sns-link a{ color: #fff; margin: 0 5px; }
+.caption .sns-link a strong{font-size:0.8em; margin-left: 2px; vertical-align: middle;}
+.caption .coninfo span:after{ display: inline-block; content: "/"; margin: 0 5px; }
+.caption .coninfo span:last-child:after{ display:none; }
+@media all and (max-width:767px){	
+	.subhd{ height:400px; }
+	.caption .tit{ font-size: 2rem; }
+	.caption .txt br{ display: none; }
+}
+@media all and (min-width:768px){
+	.subhd{ height:430px; }
+	.caption .tit{font-size: 60px; }
+	.caption .txt{ font-size: 18px; }
+}
+/* =========================
+	서브 어드민 버튼
+========================= */
+.btn_admin{ margin-top: 25px; margin-bottom: 15px; }
+.btn_admin a{ display: inline-block; padding: 5px 10px; background:#284baa; color: #fff; font-size: 12px; margin-left: 5px; }
+.btn_grey a{ display: inline-block; padding: 5px 10px; background:#777777; color: #fff; font-size: 12px; margin: 2px; }
+.btn_writer_wrap{ margin: 25px auto 0; text-align: center; }
+.btn_writer{ display:inline-block; padding:5px 15px; border-radius:90px; border:1px #fff solid; color:#fff; margin: 4px; min-width: 100px; }
+.btn_writer:hover, .btn_writer:focus{ background: #284baa; color:#fff; border:1px #284baa solid; }
+
+
+/* =========================
+	갤러리 뷰
+========================= */
+#galleryview_css .boxwrap{ position: fixed; bottom: -100%; left: 0; width: 100%; height: 100%; background: #fff; z-index: 1000000; }
+#galleryview_css .boxwrap img{ display: block; margin: 0 auto; }
+#galleryview_css .boxwrap .btn-wrap{ text-align: center; border-bottom: 1px #e1e1e1 solid;  }
+#galleryview_css .boxwrap .btn-wrap button{ height: 60px; width: 60px; border-right: 1px #e1e1e1 solid; color:#333333; }
+#galleryview_css .boxwrap .btn-wrap button:first-child{ border-left: 1px #e1e1e1 solid; }
+/* 이미지 */
+#galleryview_css .boxwrap .content-box{ padding: 50px 10px 100px; }
+#galleryview_css .boxwrap .img-con{ padding: 50px 0; }
+#galleryview_css .boxwrap .img-con img{ display: block; width: 100%; max-width: max-content; }
+
+.box-css{ width:100%; padding:30px 20px; border:1px #e1e1e1 solid; margin-top:20px; box-sizing: border-box; -webkit-box-sizing: border-box; }
 
